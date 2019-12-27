@@ -12,19 +12,19 @@
     <meta property="og:image" content="https://rpokemon.github.io/snoo.png" />
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans:300italic,400italic,600italic,700italic,400,300,600,700" type="text/css" media="all">
-    <link rel="stylesheet" href="/static/style.css" type="text/css" media="all">
-    <link rel="stylesheet" href="/static/flair.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/flair/static/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/flair/static/flair.css" type="text/css" media="all">
     <!-- JavaScript -->
-    <link rel="icon" type="image/png" href="/static/snoo.png" />
+    <link rel="icon" type="image/png" href="/flair/static/snoo.png" />
     <script>var flair = {'subreddits': {{ CONFIG.SUBREDDITS|safe }}};</script>
-    <script type="text/javascript" src="/static/flair.js"></script>
-    <script type="text/javascript" src="/static/scripts.js"></script>
+    <script type="text/javascript" src="/flair/static/flair.js"></script>
+    <script type="text/javascript" src="/flair/static/scripts.js"></script>
 </head>
 <body>
     <noscript>JavaScript is required to run this page.</noscript>
     <div class="wrapper no-style no-margin">
         <a id="help-link" href="#" onclick="n.toggleClass('#help-bubble', 'hide');return false">Need help or found a bug?</a>
-        <a id="help-link" style="float: right;" href="/logout">Log out</a>
+        <a id="help-link" style="float: right;" href="/flair/logout">Log out</a>
     </div>
     <div id="help-bubble" class="wrapper no-margin hide">
         <h3>Help Info</h3>
@@ -40,7 +40,7 @@
         Please <a href="https://www.reddit.com/message/compose?to=%2Fr%2Fpokemon">message the moderators of /r/pokemon</a>
         if you need additional help or found a problem/bug.</p>
     </div>
-    <form action='/set' onsubmit='return flair.validate()' method='post'>
+    <form action='/flair/set' onsubmit='return flair.validate()' method='post'>
         <div class="wrapper">
                 <div id="flair-selection" class="center">
                     <div class="cf">
@@ -52,7 +52,7 @@
                             <div id="flair-selection-name">u/{{redditor.name}}</div>    
                             <input id="flair-selection-text" type="text" placeholder="Insert flair text here" name='text' />
                             <div class="spacer">
-                                <input type='submit' id="flair-select-submit" value="Send Flair Request">
+                                <input type='submit' id="flair-select-submit" value="Update flair!">
                             </div>
                         </div>
                     </div>
