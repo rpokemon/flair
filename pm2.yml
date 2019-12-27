@@ -1,0 +1,4 @@
+apps:
+  script: '/bin/bash'
+  name: 'rpkmn.center:/flair'
+  args: ['-c', 'pipenv run start']
