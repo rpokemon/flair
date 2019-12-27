@@ -27,7 +27,7 @@
     # Web Server Configuration
     WEB: !Config
         HOST: 'localhost'
-        PORT: 8083
+        PORT: 8081
         TEMPLATE_DIR: 'flair/templates'
 
     SUBREDDITS: [
